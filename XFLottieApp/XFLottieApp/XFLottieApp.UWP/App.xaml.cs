@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lottie.Forms.UWP.Renderers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -53,6 +54,7 @@ namespace XFLottieApp.UWP
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Xamarin.Forms.Forms.Init(e);
+                AnimationViewRenderer.Init();
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
