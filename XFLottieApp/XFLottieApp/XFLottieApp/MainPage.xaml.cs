@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace XFLottieApp
 {
@@ -12,6 +7,20 @@ namespace XFLottieApp
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void AnimationButtonOnClicked(object sender, System.EventArgs e)
+        {
+            if (AnimationView.IsPlaying)
+            {
+                AnimationView.Pause();
+                AnimationButton.Text = "Start Animation";
+            }
+            else
+            {
+                AnimationView.Play();
+                AnimationButton.Text = "Stop Animation";
+            }
         }
     }
 }
